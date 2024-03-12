@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'orders_app.apps.OrdersAppConfig',
+    'django.middleware.locale.LocaleMiddleware',
 ]
 
 MIDDLEWARE = [
@@ -75,8 +77,12 @@ WSGI_APPLICATION = 'mars_service.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'mars_db',
+        'USER': 'postgres',
+        'PASSWORD': 'koka0220',
+        'HOST': 'localhost',
+        'PORT': '5432'
     }
 }
 
