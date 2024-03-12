@@ -50,6 +50,8 @@ class DeviceInField(models.Model):
 
 
     def __str__(self):
+        return f"{self.serial_number} {self.analyzer_id}"
+
 
 def status_validator(order_status):
     if order_status not in ["open", "closed", "in progress", "need info"]:
