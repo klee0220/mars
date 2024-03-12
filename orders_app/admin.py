@@ -7,6 +7,7 @@ from .models import Order
 
 from .models import Order, Device, Customer, DeviceInField
 
+
 class DeviceAdmin(admin.ModelAdmin):
     list_display = ('id', 'manufacturer', 'model')
 
